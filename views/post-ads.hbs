@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>meta}}
+<body>
+
+{{>header}}
+
+
+<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="breadcrumb-wrapper">
+<h2 class="product-title">Post you Ads</h2>
+<ol class="breadcrumb">
+<li><a href="#">Home /</a></li>
+<li class="current">Post you Ads</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="content" class="section-padding">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3 page-sidebar">
+<aside>
+<div class="sidebar-box">
+<div class="user">
+<figure>
+<a href="#"><img src="assets/img/author/img1.jpg" alt=""></a>
+</figure>
+<div class="usercontent">
+<h3>Hello William!</h3>
+<h4>Administrator</h4>
+</div>
+</div>
+<nav class="navdashboard">
+<ul>
+<li>
+<a href="/dashboard">
+<i class="lni-dashboard"></i>
+<span>Dashboard</span>
+</a>
+</li>
+<li>
+<a href="/account-profile-setting">
+<i class="lni-cog"></i>
+<span>Profile Settings</span>
+</a>
+</li>
+<li>
+<a href="/account-myads">
+<i class="lni-layers"></i>
+<span>My Ads</span>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="lni-envelope"></i>
+<span>Offers/Messages</span>
+</a>
+</li>
+<li>
+<a href="/payments">
+<i class="lni-wallet"></i>
+<span>Payments</span>
+</a>
+</li>
+<li>
+<a href="/account-favourite-ads">
+<i class="lni-heart"></i>
+<span>My Favourites</span>
+</a>
+</li>
+<li>
+<a href="/account-profile-setting">
+<i class="lni-star"></i>
+<span>Privacy Settings</span>
+</a>
+</li>
+<li>
+<a href="#">
+<i class="lni-enter"></i>
+<span>Logout</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="widget">
+<h4 class="widget-title">Advertisement</h4>
+<div class="add-box">
+<img class="img-fluid" src="assets/img/img1.jpg" alt="">
+</div>
+</div>
+</aside>
+</div>
+<div class="col-sm-12 col-md-8 col-lg-9">
+<div class="row page-content">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+<div class="inner-box">
+<div class="dashboard-box">
+<h2 class="dashbord-title">Ad Detail</h2>
+</div>
+<form action="/postItem" method="post" enctype="multipart/form-data">
+<div class="dashboard-wrapper">
+<div class="form-group mb-3">
+<label class="control-label">Project Title</label>
+<input class="form-control input-md" name="Title" placeholder="Title" type="text">
+</div>
+<div class="form-group mb-3 tg-inputwithicon">
+<label class="control-label">Categories</label>
+<div class="tg-select form-control">
+<select>
+<option value="none">Select Categories</option>
+<option value="none">Mobiles</option>
+<option value="none">Electronics</option>
+<option value="none">Training</option>
+<option value="none">Real Estate</option>
+<option value="none">Services</option>
+<option value="none">Training</option>
+<option value="none">Vehicles</option>
+</select>
+</div>
+</div>
+{{!-- <form action="/postItem" method="post" enctype="multipart/form-data"> --}}
+<div class="form-group mb-3">
+<label class="control-label">Price Title</label>
+<input class="form-control input-md" name="price" placeholder="Ad your Price" type="text">
+<div class="tg-checkbox mt-3">
+<div class="custom-control custom-checkbox">
+<input type="checkbox" class="custom-control-input" id="tg-priceoncall">
+<label class="custom-control-label" for="tg-priceoncall">Price On Call</label>
+</div>
+</div>
+</div>
+<div class="form-group md-3">
+<section id="editor">
+<div id="summernote">
+</div>
+</section>
+</div>
+<div class="form-group mb-3">
+<label class="control-label">First Name*</label>
+<input class="form-control input-md" name="name" type="text">
+</div>
+<div class="form-group mb-3">
+<label class="control-label">Last Name*</label>
+<input class="form-control input-md" name="name" type="text">
+</div>
+<div class="form-group mb-3">
+<label class="control-label">Phone*</label>
+<input class="form-control input-md" name="phone" type="text">
+</div>
+<label class="tg-fileuploadlabel" for="tg-photogallery">
+<span>Drop files anywhere to upload</span>
+<span>Or</span>
+<span class="btn btn-common">Select Files</span>
+<span>Maximum upload file size: 10MB</span>
+<input id="tg-photogallery" class="tg-fileinput" type="file" name="images" multiple>
+</label>
+<button class="btn btn-common" type="submit">Post Ad</button>
+</div>
+</div>
+</div>
+
+</form>
+
+{{>footer}}
+
+
+<a href="#" class="back-to-top">
+<i class="lni-chevron-up"></i>
+</a>
+
+<div id="preloader">
+<div class="loader" id="loader-1"></div>
+</div>
+
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/color-switcher.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery.slicknav.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/form-validator.min.js"></script>
+<script src="assets/js/contact-form-script.min.js"></script>
+<script src="assets/js/summernote.js"></script>
+<script>
+      $('#summernote').summernote({
+          height: 250, // set editor height
+          minHeight: null, // set minimum height of editor
+          maxHeight: null, // set maximum height of editor
+          focus: false // set focus to editable area after initializing summernote
+      });
+
+         let successMessage = "{{success}}"
+        let errorMessage = "{{error}}"
+        if(successMessage){
+            Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: successMessage,
+        });
+        }
+        if(errorMessage){
+            Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: errorMessage,
+        });
+        }
+    </script>
+</body>
+
+</html>
