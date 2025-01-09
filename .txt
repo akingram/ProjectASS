@@ -1,0 +1,70 @@
+const postAds = async (req, res) => {
+  try {
+   
+      const {
+        title,
+        price,
+        message,
+        firstName,
+        address,
+        country,
+        category,
+        condition,
+        brand,
+      } = req.body;
+      const images = req.files.images;
+      const imageArr = [];
+      const productField = [
+        "title",
+        "price",
+        "message",
+        "firstName",
+        "address",
+        "category",
+        "country",
+        "condition",
+        "brand",
+      ];
+      const emptyField = [];
+      for (const field of productField) {
+        if (!req.body[field] || req.body[field] === "") {
+          emptyField.push(field);
+        }
+      }
+      if (emptyField.length > 0) {
+        return res.render("post-ads", {
+          error: `This field(s) ${emptyField.join(", ")} cannot be empty`,
+        });
+      }
+      if (req.files && Array.isArray(req.files)) {
+      const fileArray = req.files.slice(0, 5);
+      for (const file of fileArray) {
+        const uploadedImage = await cloudinary.uploader.upload(file.path);
+        images.push(uploadedImage.secure_url);
+      }
+    
+
+
+      await productModel.create({
+        title: title,
+        price: price,
+        message: message,
+        firstName: firstName,
+        address: address,
+        country: country,
+        category: category,
+        condition: condition,
+        brand: brand,
+        images: imageArr,
+      });
+      res.render("post-ads", {
+        success: "Product posted successfully",
+        userInner,
+      });
+    } 
+  } catch (err) {
+    res.render("error", { error: err.message });
+  }
+
+
+  
